@@ -54,7 +54,12 @@ def update_department():
         print(f'Department {id_} not found')
 
 def delete_department():
-    pass
+    id_ = input("Enter department's id: ")
+    if department := Department.find_by_id(id_):
+        department.delete()
+        print(f'Department {id_} deleted')
+    else:
+        print(f'Department {id_} not found')
 
 
 # You'll implement the employee functions in the lab
