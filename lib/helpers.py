@@ -27,9 +27,16 @@ def find_department_by_id():
 
 
 def create_department():
-    pass
-
-
+    name = input("Enter the department's name: ")
+    location = input("Enter the department's location: ")
+    print('name',name)
+    print('location',location)
+    try:
+        department = Department.create(name, location)
+        print(f'Success: {department}')
+    except Exception as exc:
+        print("Error creating department: ", exc)
+    
 def update_department():
     pass
 
