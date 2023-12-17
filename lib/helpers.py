@@ -10,7 +10,10 @@ def exit_program():
 
 
 def list_departments():
-    pass
+    departments = Department.get_all()
+    for department in departments:
+        print(department)
+    
 
 
 def find_department_by_name():
