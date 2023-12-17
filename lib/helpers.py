@@ -19,10 +19,11 @@ def find_department_by_name():
     department = Department.find_by_name(name)
     print(department) if department else print(
         f'Department {name} not found')
-
-
+    
 def find_department_by_id():
-    pass
+    id_ = input("Enter the department's id: ")
+    department = Department.find_by_id(id_)
+    print(department) if department else print(f'Department {id_} not found')
 
 
 def create_department():
