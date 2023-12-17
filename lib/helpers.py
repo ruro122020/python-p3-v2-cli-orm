@@ -13,11 +13,12 @@ def list_departments():
     departments = Department.get_all()
     for department in departments:
         print(department)
-    
-
 
 def find_department_by_name():
-    pass
+    name = input("Enter the department's name: ")
+    department = Department.find_by_name(name)
+    print(department) if department else print(
+        f'Department {name} not found')
 
 
 def find_department_by_id():
